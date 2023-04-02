@@ -17,6 +17,15 @@ body {
     color: $green;
 }
 
+.logo {
+    display: block;
+    background-image: url(../images/logo.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 12.3rem;
+    height: 3.2rem;
+}
+
 .header {
 max-width: 1440px;
 margin: 0 auto 6rem;
@@ -29,8 +38,6 @@ align-items: center;
 &__nav {
     display: flex;
     list-style-type: none;
-    margin: 0;
-    padding-left: 0;
     gap: 4.8rem;
 }
 &__link {
@@ -38,6 +45,7 @@ align-items: center;
     text-decoration: none;
     &:hover {
         color: $orange;
+        transition: 0.2s;
     }
 }
  &__tel {
@@ -46,6 +54,8 @@ align-items: center;
     text-decoration: none;
     &:hover {
         color: $orange;
+        cursor: pointer;
+        transition: 0.2s;
     }
 }
 &__cart {
@@ -59,10 +69,10 @@ align-items: center;
     background-position: center center;
     background-size: 1.7rem 1.5rem;
     position: relative;
-    border: 1px solid orange;
     &:hover {
     background-color: $green;
-    border: 1px solid $green;
+    cursor: pointer;
+    transition: 0.2s;
     }
 }
 
@@ -75,15 +85,6 @@ align-items: center;
 }
 
 }
-.logo {
-    display: block;
-    background-image: url(../images/logo.svg);
-    background-repeat: no-repeat;
-    background-size: contain;
-    width: 12.3rem;
-    height: 3.2rem;
-}
-
 
 .container {
     max-width: 1440px;
@@ -220,6 +221,11 @@ align-items: center;
         left: 0;
         width: 10rem;
     }
+}
+
+ul {
+    margin: 0;
+    padding-left: 0;
 }
 .title {
     font-family: $font-cormorant;
