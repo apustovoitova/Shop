@@ -278,6 +278,7 @@ display: inline-block;
     background-repeat: no-repeat;
     padding-top: -2rem;
     padding-bottom: 20rem;
+
     &__text {
         margin-top: 6rem;
         max-width: 70rem;
@@ -368,7 +369,6 @@ display: inline-block;
         background-size: cover;
         background-repeat: no-repeat;
     }
-   
 }
    }
    &-pagination {
@@ -393,5 +393,54 @@ display: inline-block;
     left: initial;
     right: 10rem;
    }
-   
+}
+.about {
+        background-image: url(../images/unique.png);
+        background-size: cover;
+        background-position-x: center;
+        background-repeat: no-repeat;
+
+        &__text {
+            margin-left: 12rem;  
+            max-width: 58.8rem;
+            margin-top: 8rem;  
+        }
+        &__box {
+            display: flex;
+            gap: 29rem;
+            align-items: center;
+        }
+
+        &__list {
+            list-style-type: none;
+            display: flex;
+            justify-content: center;
+            gap: 13.3rem;
+            font-style: italic;
+            font-weight: 700;
+            font-size: 3rem;
+            font-family: $font-cormorant;
+        }
+        &__item {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            &::before {
+                content: '';
+                border: 0.1rem solid rgba($green, 0.4);
+                border-radius: 100%;
+                background-position: center center;
+                background-repeat: no-repeat;
+                width: 84px;
+                height: 84px;
+                margin-bottom: 2rem;
+            }
+            &_health {
+                &::before {
+                    background-image: url(../images/fruits.svg);
+                    background-size: 4.4rem 4.1rem;
+                }
+            }
+        }
 }
