@@ -42,18 +42,18 @@
         <div class="container">
             <div class="main__flex">
                 <div class="main__text">
-                    <h1 class="title title_block">
+                    <h2 class="title title_block">
                         Здоровая еда &ndash;
                         <span class="title__span">это просто!</span>
-                    </h1>
+                    </h2>
                     <div class="main__item">
                         <p class="description description_size-s">Сеть магазинов полезных продуктов питания,
                             производство
                             которых основано на принципа и стандартах органического чистых продуктов
                         </p>
-                        <div class="main__link">
-                            <a class="link" href="#">Перейти в каталог</a>
-                        </div>
+
+                        <a class="link" href="#">Перейти в каталог</a>
+
                     </div>
                 </div>
                 <div class="main__cover">
@@ -80,10 +80,10 @@
     </div>
     <section class="offer">
         <div class="container">
-            <h1 class="title title_block">
+            <h3 class="title title_block">
                 Что мы
                 <span class="title__span">предлагаем</span>
-            </h1>
+            </h3>
             <div class="offer__text">
                 <p class="description description_size-m">Органика - это целостная система производства по-настоящему
                     чистой, натуральной и полезной продукции
@@ -105,7 +105,7 @@
                                 <a class="swiper-slide__link" href="#">Подробнее</a>
                             </div>
                         </div>
-                        <div class="swiper-slide swiper-slide_pasta">
+                        <div class="swiper-slide swiper-slide_white swiper-slide_pasta">
                             <h3 class="swiper-slide__title">Бакалея</h3>
 
                             <div class="swiper-slide__hover">
@@ -117,7 +117,7 @@
                                 <a class="swiper-slide__link" href="#">Подробнее</a>
                             </div>
                         </div>
-                        <div class="swiper-slide swiper-slide_steaks">
+                        <div class="swiper-slide swiper-slide_white swiper-slide_steaks">
                             <h3 class="swiper-slide__title">Мясо, птица</h3>
                             <div class="swiper-slide__hover">
                                 <p class="swiper-slide__text">В наши дни появилась мода на&nbsp;здоровое питание,
@@ -179,10 +179,10 @@
     </section>
     <section class="about">
         <div class="container">
-            <h1 class="title title_block">
+            <h4 class="title title_block">
                 В чем наша
                 <span class="title__span">уникальность</span>
-            </h1>
+            </h4>
             <div class="about__box">
                 <div class="about__text">
                     <p class="description description_size-s">Мы полностью контролируем весь цикл производства – от поля
@@ -206,10 +206,10 @@
     </section>
     <section class="trends">
         <div class="container">
-            <h1 class="title">
+            <h5> class="title">
                 Наши
                 <span class="title__span">новинки</span>
-            </h1>
+            </h5>
             <div class="trends__text">
                 <p class="description description_size-m">Будь в тренде с современым миром, и будь здоров вместе с нами
                 </p>
@@ -263,7 +263,7 @@
                         </div>
                         <div class="swiper-slide">
                             <div class="swiper-slide__cover">
-                                <img class="swiper-slide__image" src="images/catalog/chicken.png" alt="">
+                                <img class="swiper-slide__image" src="images/catalog/chicken.png" alt="#">
                             </div>
                             <h3 class="swiper-slide__title">
                                 Куриное филе Оссобуко
@@ -292,26 +292,35 @@
     </section>
     <section class="catalog">
         <div class="container">
-            <h1 class="title">
+            <h6 class="title">
                 Каталог
-            </h1>
+            </h6>
             <div class="catalog__text">
                 <p class="description description_size-m">Еда которая заботиться о вашей фигуре
                 </p>
             </div>
-            <div class="variants">
-                <ul>
-                    <li>Молочные продукты</li>
-                    <li>Бакалея</li>
-                    <li>Мясо, птица</li>
-                    <li>Детям</li>
-                    <li>Овощи и фрукты</li>
-                </ul>
-            </div>
-            <div class="menu-grid">
+
+            <ul class="variants catalog__list">
+                <li class="variants__item">
+                    <a class="variants__link" href="#">Молочные продукты</a>
+                </li>
+                <li class="variants__item">
+                    <a class="variants__link" href="#">Бакалея</a>
+                </li>
+                <li class="variants__item">
+                    <a class="variants__link" href="#">Мясоб птица</a>
+                </li>
+                <li class="variants__item">
+                    <a class="variants__link" href="#">Детям</a>
+                </li>
+                <li class="variants__item">
+                    <a class="variants__link" href="#">Овощи и фрукты</a>
+                </li>
+            </ul>
+            <div class="catalog-grid">
                 <div class="swiper-slide">
                     <div class="swiper-slide__cover">
-                        <img class="swiper-slide__image" src="images/catalog/bottleofmilk.png" alt="">
+                        <img class="swiper-slide__image" src="images/catalog/bottleofmilk.jpg" alt="#">
                     </div>
                     <h3 class="swiper-slide__title">
                         Молоко топленое
@@ -324,26 +333,26 @@
                     </p>
                     <div class="swiper-slide__footer">
                         <div class="counter">
-                            <button class="counter__btn counter__minus"></button>
-                            <input class="counter__input" type="text" value="1">
-                            <button class="counter__btn counter__plus"></button>
+                            <button class="counter__btn counter__btn_min counter__minus"></button>
+                            <input class="counter__input counter__input_min" type="text" value="1">
+                            <button class="counter__btn counter__btn_min counter__plus"></button>
                         </div>
-                        <a class="link" href="#"> В корзину</a>
+                        <a class="link link_min" href="#"> В корзину</a>
                     </div>
                 </div>
 
                 <div class="swiper-slide">
                     <div class="swiper-slide__cover">
-                        <img class="swiper-slide__image" src="images/catalog/bottleofmilk.png" alt="">
+                        <img class="swiper-slide__image" src="images/catalog/jogurt.jpg" alt="#">
                     </div>
                     <h3 class="swiper-slide__title">
-                        Молоко топленое
+                        Йогурт с черникой
                     </h3>
                     <p class="swiper-slide__description">
-                        Молоко Healthy food топленеое мдж 4% 500гр
+                        Йогурт Healthy food с черникой, питьевой 1,5%, 750 г
                     </p>
                     <p class="swiper-slide__price">
-                        159 руб/шт
+                        89 руб/шт
                     </p>
                     <div class="swiper-slide__footer">
                         <div class="counter">
@@ -351,21 +360,21 @@
                             <input class="counter__input" type="text" value="1">
                             <button class="counter__btn counter__plus"></button>
                         </div>
-                        <a class="link" href="#"> В корзину</a>
+                        <a class="link link_min" href="#"> В корзину</a>
                     </div>
                 </div>
                 <div class="swiper-slide">
                     <div class="swiper-slide__cover">
-                        <img class="swiper-slide__image" src="images/catalog/bottleofmilk.png" alt="">
+                        <img class="swiper-slide__image" src="images/catalog/cottage.jpg" alt="#">
                     </div>
                     <h3 class="swiper-slide__title">
-                        Молоко топленое
+                        Творог
                     </h3>
                     <p class="swiper-slide__description">
-                        Молоко Healthy food топленеое мдж 4% 500гр
+                        Творог Healthy food Рассыпчатый 9% 350 г
                     </p>
                     <p class="swiper-slide__price">
-                        159 руб/шт
+                        216 руб/шт
                     </p>
                     <div class="swiper-slide__footer">
                         <div class="counter">
@@ -373,21 +382,21 @@
                             <input class="counter__input" type="text" value="1">
                             <button class="counter__btn counter__plus"></button>
                         </div>
-                        <a class="link" href="#"> В корзину</a>
+                        <a class="link link_min" href="#"> В корзину</a>
                     </div>
                 </div>
                 <div class="swiper-slide">
                     <div class="swiper-slide__cover">
-                        <img class="swiper-slide__image" src="images/catalog/bottleofmilk.png" alt="">
+                        <img class="swiper-slide__image" src="images/catalog/mozarella.jpg" alt="#">
                     </div>
                     <h3 class="swiper-slide__title">
-                        Молоко топленое
+                        Моцарелла
                     </h3>
                     <p class="swiper-slide__description">
-                        Молоко Healthy food топленеое мдж 4% 500гр
+                        Моцарелла Healthy food 45%, 0.125 кг
                     </p>
                     <p class="swiper-slide__price">
-                        159 руб/шт
+                        359 руб/шт
                     </p>
                     <div class="swiper-slide__footer">
                         <div class="counter">
@@ -395,21 +404,21 @@
                             <input class="counter__input" type="text" value="1">
                             <button class="counter__btn counter__plus"></button>
                         </div>
-                        <a class="link" href="#"> В корзину</a>
+                        <a class="link link_min" href="#"> В корзину</a>
                     </div>
                 </div>
                 <div class="swiper-slide">
                     <div class="swiper-slide__cover">
-                        <img class="swiper-slide__image" src="images/catalog/bottleofmilk.png" alt="">
+                        <img class="swiper-slide__image" src="images/catalog/butter.jpg" alt="#">
                     </div>
                     <h3 class="swiper-slide__title">
-                        Молоко топленое
+                        Масло сливочное
                     </h3>
                     <p class="swiper-slide__description">
-                        Молоко Healthy food топленеое мдж 4% 500гр
+                        Масло Healthy food сливочное 82,5%, 200г
                     </p>
                     <p class="swiper-slide__price">
-                        159 руб/шт
+                        139 руб/шт
                     </p>
                     <div class="swiper-slide__footer">
                         <div class="counter">
@@ -417,18 +426,18 @@
                             <input class="counter__input" type="text" value="1">
                             <button class="counter__btn counter__plus"></button>
                         </div>
-                        <a class="link" href="#"> В корзину</a>
+                        <a class="link link_min" href="#"> В корзину</a>
                     </div>
                 </div>
                 <div class="swiper-slide">
                     <div class="swiper-slide__cover">
-                        <img class="swiper-slide__image" src="images/catalog/bottleofmilk.png" alt="">
+                        <img class="swiper-slide__image" src="images/catalog/jogurtwithfruits.jpg" alt="">
                     </div>
                     <h3 class="swiper-slide__title">
-                        Молоко топленое
+                        Йогурт термостатный
                     </h3>
                     <p class="swiper-slide__description">
-                        Молоко Healthy food топленеое мдж 4% 500гр
+                        Йогурт Healthy food термостатный с фруктово-ягодным 2,5 %, 165 г
                     </p>
                     <p class="swiper-slide__price">
                         159 руб/шт
@@ -439,21 +448,21 @@
                             <input class="counter__input" type="text" value="1">
                             <button class="counter__btn counter__plus"></button>
                         </div>
-                        <a class="link" href="#"> В корзину</a>
+                        <a class="link link_min" href="#"> В корзину</a>
                     </div>
                 </div>
                 <div class="swiper-slide">
                     <div class="swiper-slide__cover">
-                        <img class="swiper-slide__image" src="images/catalog/bottleofmilk.png" alt="">
+                        <img class="swiper-slide__image" src="images/catalog/cheese.jpg" alt="#">
                     </div>
                     <h3 class="swiper-slide__title">
-                        Молоко топленое
+                        Сыр
                     </h3>
                     <p class="swiper-slide__description">
-                        Молоко Healthy food топленеое мдж 4% 500гр
+                        Сыр Healthy food Сливочный 45% 200г
                     </p>
                     <p class="swiper-slide__price">
-                        159 руб/шт
+                        559 руб/шт
                     </p>
                     <div class="swiper-slide__footer">
                         <div class="counter">
@@ -461,21 +470,21 @@
                             <input class="counter__input" type="text" value="1">
                             <button class="counter__btn counter__plus"></button>
                         </div>
-                        <a class="link" href="#"> В корзину</a>
+                        <a class="link link_min" href="#"> В корзину</a>
                     </div>
                 </div>
                 <div class="swiper-slide">
                     <div class="swiper-slide__cover">
-                        <img class="swiper-slide__image" src="images/catalog/bottleofmilk.png" alt="">
+                        <img class="swiper-slide__image" src="images/catalog/souce.jpg" alt="#">
                     </div>
                     <h3 class="swiper-slide__title">
-                        Молоко топленое
+                        Соус для салата
                     </h3>
                     <p class="swiper-slide__description">
-                        Молоко Healthy food топленеое мдж 4% 500гр
+                        Соус для салата Healthy food пикантыный 4% 70гр
                     </p>
                     <p class="swiper-slide__price">
-                        159 руб/шт
+                        59 руб/шт
                     </p>
                     <div class="swiper-slide__footer">
                         <div class="counter">
@@ -483,10 +492,11 @@
                             <input class="counter__input" type="text" value="1">
                             <button class="counter__btn counter__plus"></button>
                         </div>
-                        <a class="link" href="#"> В корзину</a>
+                        <a class="link link_min" href="#"> В корзину</a>
                     </div>
                 </div>
             </div>
+
         </div>
     </section>
 </body>

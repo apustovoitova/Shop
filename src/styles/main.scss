@@ -39,6 +39,7 @@ a{
 ul {
     margin: 0;
     padding-left: 0;
+    text-decoration: none;
 }
 
 .header {
@@ -175,7 +176,7 @@ align-items: center;
             position: absolute; 
         }
         &_01 {
-            top: 4.5rem;
+            top: 5.5rem;
             left: 6.3rem;
             &::before {
                 bottom: 0.9rem;
@@ -184,14 +185,14 @@ align-items: center;
         }
         &_02 {
             top: 18.7rem;
-            right: 0.4rem;
+            right: 1.4rem;
             &::before {
                 bottom: 1.7rem;
                 left: -2.6rem;
             }
         }
         &_03 {
-            bottom: -5rem;
+            bottom: -4rem;
             right: 24rem;
             &::before {
                 bottom: 5rem;
@@ -203,7 +204,7 @@ align-items: center;
        display: block; 
        color: rgba($green, 0.8);
     }
-
+    
     &__tomato {
         position: absolute;
         right: 12rem;
@@ -270,6 +271,11 @@ box-shadow: 0rem 1rem 1.1rem .2rem rgba(207, 92, 13, 0.2);
 text-decoration: none;
 border-radius: 3.8rem;
 display: inline-block;
+&_min {
+    font-size: 1.4rem;
+    padding: 2rem 3.4rem;
+    box-shadow: 0rem 0.1rem 1.1rem .17rem rgba(207, 92, 13, 0.15);
+}
 }
 .offer {
     background-image: url(../images/offer.png);
@@ -287,25 +293,26 @@ display: inline-block;
 
 .slider {
     overflow: hidden;
-    padding-top: 10rem;
+    padding-top: 9.4rem;
 }
 .swiper {
     overflow: initial;
    &-slide {
     border: 0.1rem solid rgba($green, 0.4);
-    height: 51.5rem;
     border-radius: 2rem;
-    padding: 4rem 3.7rem;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
+    padding: 3rem 3.7rem 3.8rem;
     justify-content: space-between;
+    box-sizing: border-box;
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
     z-index: 0;
     &_white {
+        height: 52rem;
+        display: flex;
+        flex-direction: column;
         justify-content: flex-end;
+        padding: 4rem 3.7rem;
         &:hover {
             .swiper-slide__hover {
                 height: 233px; 
@@ -371,8 +378,9 @@ display: inline-block;
    }
    &__link {
     text-transform:uppercase;
-    color: rgba($green, 0.8);
     font-weight: 500;
+    color: rgba($green, 0.8);
+    text-decoration: none;
     letter-spacing: 0.1rem;
     display: flex;
     align-items: center;
@@ -396,17 +404,19 @@ display: inline-block;
     position: relative;
     overflow: hidden;   
     width: 100%;
-    height: 29.3rem;
-    max-height: 29.3rem;
+    height: 32.2rem;
     text-align: center;
 }
 
 &__image {
-   height: 100%;
+    width: 100%;
+    max-width: 35.1rem;
+    height: 100%;
+    object-fit: contain;
 }
 &__footer {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
 }
    }
@@ -425,7 +435,7 @@ display: inline-block;
        font-size: 2rem;
     }
    }
-   &-button-prev {
+   &-button-next {
     right: -0.8rem;
    }
    &-button-prev {
@@ -443,6 +453,10 @@ display: inline-block;
         background-color: transparent;
         padding: 0;
         border-radius: 100%;
+        &_min {
+            width: 4rem;
+            height: 4rem;
+        }
     }
     &__minus {
         pointer-events: none;
@@ -456,12 +470,16 @@ display: inline-block;
         background-image: url(../images/plus-counter.svg);
         background-size: 2rem 1.1rem;
         background-repeat: no-repeat;
+        background-position: center;
     }
     &__input {
         text-align: center;
         font-size: 2.4rem;
         width: 4.6rem;
         border: none;
+        &_min {
+            width: 3.3rem;
+        }
     }
 }
 
@@ -529,8 +547,96 @@ display: inline-block;
             }
         }
 }
-.menu-grid {
+
+.trends {
+    &__list {
+        margin-top: 8.5rem;
+        margin-bottom: 5rem;
+    }
+}
+
+.catalog {
+    &__list {
+        margin-top: 8.5rem;
+        margin-bottom: 5rem;
+    }
+}
+.variants {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    padding-left: 0;
+    list-style-type: none;
+    &__item {
+        flex-basis: 23rem;
+        text-align: center;
+    }
+    &__link {
+        padding: 2.4rem 0;
+        border: .1rem solid  rgba($green, .5);
+        color: rgba($green, .5);
+        font-size: 1.8rem;
+        text-decoration: none;
+        border-radius: 4rem;
+        display: block;
+        &:hover {
+            border: .1rem solid $orange;
+            color: $orange;
+        }
+    }
+
+}
+
+.catalog-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 2rem;
+&__item {
+    border: 0.1rem solid rgba($green, 0.4) inset;
+    border-radius: 2rem;
+    padding: 2.7rem 3rem 3.8rem;
+    box-sizing: border-box;
+    &:hover {
+        box-shadow: 0 0 0 0.2rem rgba($green, 0.4) inset;
+    }
+}
+&__cover {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+&__image {
+    width: 100%;
+    max-width: 35.1rem;
+    height: 100%;
+    object-fit: contain;
+}
+&__title {
+    font-family:$font-cormorant;
+    font-size: 3rem;
+    color: #27300f;
+    margin-top: 1.7rem;
+    margin-bottom: 0;
+}
+&__description {
+    font-size: 1.6rem;
+    color: rgba($green, .7);
+    margin-top: 1.8rem;
+    margin-bottom: 0;
+    min-height: 6.1rem;
+    max-width: 30rem;
+    line-height: 1.5;
+}
+&__price {
+    font-size: 2.4rem;
+    margin-bottom: 3rem;
+    margin-top: 0;
+}
+&__footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 }
