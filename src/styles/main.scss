@@ -143,8 +143,8 @@ align-items: center;
         justify-content: center;
         align-items: center;
     }
-    &__image {
-        width: 92%;
+    &__image-bg {
+        width: 77%;
     }
     &__text {
         padding-top: 4rem;
@@ -200,37 +200,35 @@ align-items: center;
             }
         }
     }
+    img{
+        position: absolute;
+    }
     &__food {
        display: block; 
        color: rgba($green, 0.8);
     }
-    
+
     &__tomato {
-        position: absolute;
         right: 12rem;
         bottom: 13rem;
         width: 11rem;
     }
     &__avocado {
-        position: absolute;
         right: 0rem;
         top: 5rem;
         width: 17rem;
     }
     &__cucumber {
-        position: absolute;
         top: 0;
         left: 68rem;
         width: 8rem;
     }
     &__pepper {
-        position: absolute;
         left: 3rem;
         top: 40rem;
         width: 8rem;
     }
     &__beans {
-        position: absolute;
         bottom: 15rem;
         left: 0;
         width: 10rem;
@@ -271,6 +269,10 @@ box-shadow: 0rem 1rem 1.1rem .2rem rgba(207, 92, 13, 0.2);
 text-decoration: none;
 border-radius: 3.8rem;
 display: inline-block;
+&:hover  {
+    transform: scale(1.2);
+    opacity: 1;
+ }
 &_min {
     font-size: 1.4rem;
     padding: 2rem 3.4rem;
