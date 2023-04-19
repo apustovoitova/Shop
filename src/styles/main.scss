@@ -271,6 +271,7 @@ box-shadow: 0rem 1rem 1.1rem .2rem rgba(207, 92, 13, 0.2);
 text-decoration: none;
 border-radius: 3.8rem;
 display: inline-block;
+border: none;
 &:hover  {
     transform: scale(1.2);
     opacity: 1;
@@ -592,7 +593,6 @@ display: inline-block;
         background-size: cover;
         background-position-x: center;
         background-repeat: no-repeat;
-        
         .title {
             margin-top: 19rem;
         }
@@ -628,7 +628,6 @@ display: inline-block;
             color: $orange;
         }
     }
-
 }
 
 .catalog-grid {
@@ -682,4 +681,149 @@ display: inline-block;
     justify-content: space-between;
     align-items: center;
 }
+
 }
+.refresh {
+    display: flex;
+    justify-content: center;
+    margin-top: 2.8rem;
+   
+    &__btn {
+
+        text-transform: uppercase;
+        font-size: 1.6rem;
+        font-style: $font-jost;
+        color: rgba($green, 0.8);
+        border: none;
+        background: transparent;
+        
+        &::before {
+            content: '';
+           background-image: url(../images/refresh.svg);
+           background-size: 2rem;
+           background-repeat: no-repeat;
+           width: 3rem;
+           opacity: 80%;
+           
+        }
+    }
+}
+.payment {
+   .title {
+    margin-top: 17.8rem;
+   }
+   
+   &__box {
+    display: flex;
+    justify-content: space-between;
+   
+    margin-top: 6rem;  
+}
+   &__text {
+    margin-left: 12rem;  
+    flex-basis: 62rem;
+}
+&__discount {
+    color: #d26a22;
+    display: block;
+    cursor: pointer;
+}
+&__bank-cards {
+    display: flex;
+    gap: 3.2rem;
+    margin-top: 4.5rem;
+    cursor: pointer;
+    opacity: 1;
+}
+&__mastercard {
+    width: 5.3rem;
+    height: 3.2rem;
+    &:hover {
+        opacity: 0.4;
+        transition: 0.2s;
+    }
+}
+&__visa {
+    width: 7.4rem;
+    height: 2.3rem;
+    &:hover {
+        opacity: 0.4;
+        transition: 0.2s;
+    }
+}
+&__paypal {
+    width: 8.7rem;
+    height: 2.4rem;
+    &:hover {
+        opacity: 0.4;
+        transition: 0.2s;
+    }
+}
+}
+.contact {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    &-box {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+       &__text {
+        max-width: 40rem;
+        flex-grow: 1;
+       }
+       &__form {
+        flex-basis: 58.9rem;
+       }
+    }
+}
+.contact-box {
+   &__text {
+    margin-left: 14.6rem;
+    margin-bottom: 10rem;
+    max-width: 40rem;
+}
+&__item {
+    text-decoration: none;
+}
+
+}
+.card {
+    border: .2rem solid  rgba($green, .4);
+    padding: 3.2rem 5.8rem 4rem;
+    margin-top: 0;
+    border-radius: 2rem;
+    &__title {
+        font-size: 3rem;
+        font-family: $font-cormorant;
+    }
+    &__label {
+        font-size: 1.2rem;
+        margin-bottom: 2rem;
+        display: block;
+        margin-left: 0.6rem;
+    }
+     &__input {
+        border: .1rem solid  rgba($green, .4);
+        padding: 2.2rem 3rem;
+        margin-bottom: 3.2rem;
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+        border-radius: 2rem;
+    }
+    &__check {
+    font-size: 1.2rem;
+    color: rgba($green, .6);
+    line-height: 1.5;
+    max-width: 36rem;
+}
+&__docs {
+    color: rgba($green, .6);  
+    text-decoration: none;
+    border-bottom: 0.1rem solid #ecedec;
+}
+&__link {
+margin-top: 1.2rem;
+}
+}
+
