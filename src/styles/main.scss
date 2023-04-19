@@ -279,6 +279,10 @@ display: inline-block;
     font-size: 1.4rem;
     padding: 2rem 3.4rem;
     box-shadow: 0rem 0.1rem 1.1rem .17rem rgba(207, 92, 13, 0.15);
+    &:hover  {
+        transform: scale(1.1);
+        opacity: 1;
+     }
 }
 }
 .offer {
