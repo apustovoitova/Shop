@@ -8,6 +8,20 @@ $white: #ffffff;
 $font-jost: 'Jost', sans-serif;
 $font-cormorant: 'Cormorant', serif;
 
+$r_minmob: 320px;
+$r_mob_360: 360px;
+$r_mob_400: 400px;
+$r_mob_500: 500px;
+$r_mob_600: 600px;
+$r_tab: 768px;
+$r_tab_900: 900px;
+$r_desk: 1000px;
+$r_desk_1120: 1120px;
+$r_desk_hd: 1200px;
+$r_desk_1280: 1280px;
+$r_desk_1350: 1350px;
+$r_desk_full_1750: 1750px;
+
 html {
     font-size: 10px;
 }
@@ -45,6 +59,9 @@ a{
     margin: 0 auto;
     padding-left: 1.5rem;
     padding-right: 1.5rem;
+    @media (max-width: $r_tab) {
+        max-width: 60rem;
+    }
 }
 ul {
     margin: 0;
@@ -61,17 +78,33 @@ padding-right: 1.5rem;
 display: flex;
 justify-content: space-between;
 align-items: center;
-gap: 7.9rem;
+gap: 5%;
+@media (max-width: $r_desk_1280) {
+    gap: 3%;
+}
 &__nav {
     display: flex;
     list-style-type: none;
     gap: 4.8rem;
     margin: 0;
     padding-left: 0;
+    @media (max-width: $r_desk_hd) {
+        gap: 2.5rem;
+    }
+    
 }
 &__navigation {
     flex-grow: 1;
-    margin-left: 4rem;
+    margin-left: 4.5rem;
+    @media (max-width: $r_desk_1280) {
+        margin-left: 0;
+    }
+    @media (max-width: $r_desk_hd) {
+        flex-grow: 0;
+    }
+    @media (max-width: $r_tab_900) {
+        display: none;
+    }
 }
 &__link {
     font-family: $font-jost;
@@ -93,7 +126,12 @@ gap: 7.9rem;
         color: $orange;
         transition: 0.2s;
     }
+    @media (max-width: $r_desk_hd) {
+        display: none;
+    }
+    
 }
+
 &__cart {
     display: block;
     width: 4rem;
@@ -107,11 +145,25 @@ gap: 7.9rem;
     position: relative;
     cursor: pointer;
     border: 1px solid $orange;
+    transition: .2s;
+    padding: 0;
+    @media (max-width: $r_desk_hd) {
+        background-image: url(../images/cartgreen.svg);
+        background-color: $white;
+        border: 1px solid $green;
+        opacity: 0.8;
+    } 
     &:hover {
     background-color: $green;
     border: 1px solid $green;
     transition: 0.2s;
+    @media (max-width: $r_desk_hd) {
+         background-color: $white;
+         opacity: 1;
     }
+
+    }
+   
 }
 
 &__counter {
@@ -121,27 +173,100 @@ gap: 7.9rem;
     right: 1rem;
     top: .6rem;
 }
+&__phone, &__menu {
+    display: none;
+}
+&__phone {
+    @media (max-width: $r_desk_hd) {
+        display: block;
+        width: 4rem;
+        height: 4rem;
+        border-radius: 100%;
+        background-color: $white;
+        background-image: url(../images/tel.svg);
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: 1.7rem 1.5rem;
+        position: relative;
+        border: 1px solid $green;
+        transition: .2s;
+        padding: 0;
+        opacity: 0.8;
+    }
+    &:hover {
+        opacity: 1;
+    }
+}
 
+&__menu {
+    @media (max-width: $r_tab_900) {
+        display: block;
+        width: 4rem;
+        height: 4rem;
+        border-radius: 100%;
+        background-color: $white;
+        background-image: url(../images/menu.svg);
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: 1.7rem 1.5rem;
+        position: relative;
+        border: 1px solid $green;
+        transition: .2s;
+        padding: 0;
+        opacity: 0.8;
+    }
+    &:hover {
+        opacity: 1;
+    }
+}
+&__buttons {
+    @media (max-width: $r_desk_hd) {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+    }
+}
 }
 .main {
     padding-bottom: 18.7rem;
+    position: relative;
     &__item {
       margin-left: 12rem;  
       max-width: 37.8rem;
       margin-top: 6rem;
+      @media (max-width: $r_desk_1280) {
+        margin-left: 8rem;  
+    }
+    @media (max-width: $r_desk_1120) {
+        margin-left: 4rem;  
+    }
+
+    @media (max-width: $r_tab) {
+        max-width: 100%;
+        margin-left: 0;
+        margin-top: 3rem;
+     }
     }
     &__link {
     margin-top: 6rem;
+    @media (max-width: $r_tab) {
+        text-align: center;
+        margin-top: 35rem;
+     }
     }
     &__flex {
         display: flex;
         justify-content: space-between;
         gap: 3rem;
         align-items: center;
+        @media (max-width: $r_desk_1120) {
+            padding-top: 3rem;
+            padding-bottom: 7rem;
+        }
     }
     &__cover {
-        flex-basis: 76.3rem;
-        height: 76.3rem;
+        flex-basis: 75.8rem;
+        height: 75.8rem;
         border: 0.1rem solid rgba($green, 0.4);
         border-radius: 100%; 
         display: flex;
@@ -149,6 +274,23 @@ gap: 7.9rem;
         justify-content: center;
         align-items: center;
         position: relative;
+        @media (max-width: $r_desk_1350) {
+            flex-basis: 650px;
+            height: 650px;
+        }
+        @media (max-width: $r_desk_hd) {
+            flex-basis: 600px;
+            height: 600px;
+        }
+        @media (max-width: $r_desk_1120) {
+            border: 1px solid transparent;
+            height: auto;
+            flex-basis: calc(100% - 39.5rem);
+        }
+        @media (max-width: $r_tab) {
+           display: none;
+          
+        }
     }
     &__line {
         width: 65.8rem;
@@ -159,14 +301,42 @@ gap: 7.9rem;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        @media (max-width: $r_desk_1350) {
+            width: 600px;
+            height: 600px;
+        }
+        @media (max-width: $r_desk_hd) {
+          border: 1px solid transparent;
+          width: auto;
+          height: auto;
+        }
     }
     &__image-bg {
         width: 77%;
         border-radius: 100%;
         animation: shadow 3s infinite;
     }
+    &__image-mobi {
+        display: none;
+        @media (max-width: $r_tab) {
+           display: block;
+           max-width: 300px;
+    
+           margin-top: 2rem;
+           margin-left: 6rem;
+           animation: shadow 3s infinite;
+           border-radius: 100%;
+    }
+}
     &__text {
         padding-top: 2rem;
+        @media (max-width: $r_desk_1120) {
+           flex-basis: 39.5rem;
+        }
+        @media (max-width: $r_tab) {
+            flex-basis: 100%;
+            padding-top: 0;
+        }
     }
     &__btn {
         background-color: transparent;
@@ -195,7 +365,12 @@ gap: 7.9rem;
         &_01 {
             top: 5.5rem;
             left: 6.3rem;
-            
+            @media (max-width: $r_desk_hd) {
+                top: 1.5rem;
+            }
+            @media (max-width: $r_desk_1120) {
+               display: none;
+            }
             &::before {
                 bottom: 0.9rem;
                 right: -3.5rem;
@@ -205,6 +380,15 @@ gap: 7.9rem;
         &_02 {
             top: 18.7rem;
             right: 1.4rem;
+            @media (max-width: $r_desk_1350) {
+               top: 10.7rem;
+            }
+            @media (max-width: $r_desk_hd) {
+                top: 5.5rem;
+            }
+            @media (max-width: $r_desk_1120) {
+                display: none;
+             }
             &::before {
                 bottom: 1.7rem;
                 left: -2.6rem;
@@ -213,6 +397,12 @@ gap: 7.9rem;
         &_03 {
             bottom: -4rem;
             right: 24rem;
+            @media (max-width: $r_desk_hd) {
+                bottom: -5.5rem;
+            }
+            @media (max-width: $r_desk_1120) {
+                display: none;
+             }
             &::before {
                 bottom: 5rem;
                 left: 1rem;
@@ -231,26 +421,42 @@ gap: 7.9rem;
         right: 12rem;
         bottom: 13rem;
         width: 11rem;
+        @media (max-width: $r_desk_full_1750) {
+            right: 0;
+            bottom: 31rem;
+            width: 8rem;
+         }  
+       
     }
     &__avocado {
         right: 0rem;
-        top: 5rem;
-        width: 17rem;
+        top: 12rem;
+        width: 9.9rem;
+        z-index: -1;
+        
     }
     &__cucumber {
         top: 0;
         left: 68rem;
         width: 8rem;
+        @media (max-width: $r_desk_full_1750) {
+            top: 0;
+            left: 15rem;
+            width: 6rem;
+         }  
     }
     &__pepper {
         left: 3rem;
         top: 40rem;
-        width: 8rem;
+        width: 8rem; 
     }
     &__beans {
         bottom: 15rem;
         left: 0;
         width: 10rem;
+        @media (max-width: $r_desk_full_1750) {
+            display: none;
+         }
     }
 }
 .title {
@@ -258,7 +464,13 @@ gap: 7.9rem;
     font-weight: 700;
     font-size: 8rem;
     margin: 0;
-
+   
+    @media (max-width: $r_desk_1120) {
+        font-size: 6rem;
+    }
+    @media (max-width: $r_tab) {
+       text-align: center;
+    }
     &__span {
         font-style: italic;
         margin-top: -14px;
@@ -272,11 +484,20 @@ gap: 7.9rem;
 .description {
     margin: 0;
     line-height: 1.5;
+    @media (max-width: $r_tab) {
+        text-align: center;
+    }
     &_size-s {
         font-size: 1.8rem;
+        @media (max-width: $r_desk_1280) {
+            font-size: 1.6rem;
+        }
     }
     &_size-m {
         font-size: 2.4rem;
+        @media (max-width: $r_desk_1280) {
+            font-size: 2.2rem;
+        }
     }
 }
 
@@ -294,6 +515,9 @@ border: none;
 border: 3px solid $orange;
 cursor: pointer;
 transition: 2s;
+@media (max-width: $r_desk_1280) {
+    font-size: 1.4rem;
+}
 &:hover  {
     border: 3px solid black;
     $dark-orange: #cf5c0d;
@@ -321,6 +545,12 @@ transition: 2s;
 .slider {
     overflow: hidden;
     padding-top: 9.4rem;
+    @media (max-width: $r_tab) {
+        max-width: 45rem;
+        margin: 0 auto;
+        padding-top: 5.4rem;
+        padding-bottom: 5rem;
+    }
 }
 .swiper {
     overflow: initial;
@@ -331,7 +561,7 @@ transition: 2s;
     justify-content: space-between;
     box-sizing: border-box;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
     position: relative;
     z-index: 0;
     &_white {
@@ -340,6 +570,12 @@ transition: 2s;
         flex-direction: column;
         justify-content: flex-end;
         padding: 4rem 3.7rem;
+        @media (max-width: $r_desk_hd) {
+            height: 40rem;
+        }
+        @media (max-width: $r_tab) {
+            max-width: 60rem;
+        }
         &:hover {
             .swiper-slide__hover {
                 height: 233px; 
@@ -464,9 +700,15 @@ transition: 2s;
    }
    &-pagination {
     display: none;
+    @media (max-width: $r_tab) {
+    display: block;
+    }
    }
-   &-button-next, &-button-prev {
+    &-button-next, &-button-prev {
     top: -6rem;
+    @media (max-width: $r_tab) {
+        display: none;
+        }
     &:hover {
         &::after {
             color: rgba($green, 1);
@@ -484,6 +726,23 @@ transition: 2s;
     left: initial;
     right: 10rem;
    }
+}
+
+.swiper-horizontal>.swiper-pagination-bullets {
+       bottom: -5rem;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+}
+
+.swiper-pagination-bullet-active {
+    background: $orange;
+    border: 1px solid $orange;
+}
+
+.swiper-pagination-bullet {
+    width: 8px;
+    height: 8px;
 }
 .counter {
     display: flex;
@@ -538,6 +797,12 @@ transition: 2s;
         &__text {
             margin-left: 12rem;  
             flex-basis: 62rem;
+            @media (max-width: $r_desk_1280) {
+                margin-left: 8rem;  
+            }
+            @media (max-width: $r_desk_1120) {
+                margin-left: 4rem;  
+            }
             
         }
         &__list {
@@ -550,6 +815,12 @@ transition: 2s;
             margin: 0;
             padding-left: 0;
             margin: 0;
+            @media (max-width: $r_desk_1280) {
+               gap: 4rem; 
+            }
+            @media (max-width: $r_desk_1120) {
+                margin-left: 4rem;  
+            }
         }
         &__item {
             display: flex;
@@ -565,6 +836,7 @@ transition: 2s;
                 width: 84px;
                 height: 84px;
                 margin-bottom: 1.5rem;  
+                
             }
             &:nth-child(1) {
                 &::before {
@@ -753,6 +1025,12 @@ transition: 2s;
    &__text {
     margin-left: 12rem;  
     flex-basis: 62rem;
+    @media (max-width: $r_desk_1280) {
+        margin-left: 8rem;  
+    }
+    @media (max-width: $r_desk_1120) {
+        margin-left: 4rem;  
+    }
 }
 &__pay {
 margin-top: 3rem;
@@ -811,6 +1089,12 @@ margin-top: 3rem;
             margin-left: 11.8rem;
             line-height: 1.5;
             margin-top: 6rem;
+            @media (max-width: $r_desk_1280) {
+                margin-left: 8rem;  
+            }
+            @media (max-width: $r_desk_1120) {
+                margin-left: 4rem;  
+            }
         }
         &__list {
             list-style-type: none;
