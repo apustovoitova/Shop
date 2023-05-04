@@ -250,6 +250,8 @@ gap: 5%;
     &__link {
     margin-top: 6rem;
     @media (max-width: $r_tab) {
+        display: flex;
+        justify-content: center;
         text-align: center;
         margin-top: 35rem;
      }
@@ -310,20 +312,24 @@ gap: 5%;
           width: auto;
           height: auto;
         }
+
     }
     &__image-bg {
         width: 77%;
         border-radius: 100%;
         animation: shadow 3s infinite;
     }
+    .mobi {
+        display: flex;
+        justify-content: center;
+        
+    }
     &__image-mobi {
         display: none;
         @media (max-width: $r_tab) {
            display: block;
            max-width: 300px;
-    
            margin-top: 2rem;
-           margin-left: 6rem;
            animation: shadow 3s infinite;
            border-radius: 100%;
     }
@@ -503,7 +509,6 @@ gap: 5%;
 
 .link {
 color: $white;
-letter-spacing: 0.13rem;
 text-transform: uppercase;
 padding: 2.4rem 4.3rem;
 background-color: $orange;
@@ -518,6 +523,13 @@ transition: 2s;
 @media (max-width: $r_desk_1280) {
     font-size: 1.4rem;
 }
+@media (max-width: $r_tab) {
+    font-size: 1rem;
+     padding: 1.2rem 2.4rem;
+     margin: 0 auto;
+     margin-top: 0;
+}
+
 &:hover  {
     border: 3px solid black;
     $dark-orange: #cf5c0d;
@@ -530,6 +542,13 @@ transition: 2s;
     &:hover  {
     opacity: 1;
      }
+     @media (max-width: $r_tab) {
+        font-size: 1rem;
+         padding: 1.2rem 2.4rem;
+         width: 100%;
+         margin: 0 auto;
+         margin-top: 0;
+    }
 }
 }
 .offer {
@@ -544,26 +563,39 @@ transition: 2s;
 
 .slider {
     overflow: hidden;
-    padding-top: 9.4rem;
+    padding-top:9.4rem;
     @media (max-width: $r_tab) {
         max-width: 45rem;
         margin: 0 auto;
         padding-top: 5.4rem;
         padding-bottom: 5rem;
     }
+   
 }
 .swiper {
     overflow: initial;
-   &-slide {
+    &-slide {
     border: 0.1rem solid rgba($green, 0.4);
     border-radius: 2rem;
     padding: 3rem 3.7rem 3.8rem;
-    justify-content: space-between;
     box-sizing: border-box;
     background-repeat: no-repeat;
     background-size: contain;
     position: relative;
     z-index: 0;
+    @media (max-width: $r_tab) {
+        height: 40rem;
+        width: 21.1rem;
+       
+    }
+    &__elements {
+        @media (max-width: $r_tab) {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            text-align: center; 
+        }  
+    }
     &_white {
         height: 52rem;
         display: flex;
@@ -576,11 +608,19 @@ transition: 2s;
         @media (max-width: $r_tab) {
             max-width: 60rem;
         }
+       
         &:hover {
             .swiper-slide__hover {
                 height: 233px; 
                 opacity: 1;
-            } 
+            }  
+        } 
+        &:hover {
+            box-shadow: 0 0 0 0.2rem rgba($green, 0.4) inset;
+            .swiper-slide__hover {
+                height: 233px; 
+                opacity: 1;
+            }
             &::after {
                 content: '';
                 background-color: rgba($white, .55);
@@ -592,26 +632,9 @@ transition: 2s;
                 border-radius: 2rem;
                 z-index: -1;
             }
-        } 
-    }
-    &:hover {
-        box-shadow: 0 0 0 0.2rem rgba($green, 0.4) inset;
-        .swiper-slide__hover {
-            height: 233px; 
-            opacity: 1;
-        }
-        &::after {
-            content: '';
-            background-color: rgba($white, .55);
-            width: calc(100% - 4px);
-            height: calc(100% - 4px);
-            top: 0.2rem;
-            left: 0.2rem;
-            position:absolute;
-            border-radius: 2rem;
-            z-index: -1;
         }
     }
+      
 &_milk {
     background-image: url(../images/milk.png);
 }
@@ -626,6 +649,12 @@ transition: 2s;
     font-size: 3rem;
     color: $green;
     margin-bottom: 0;
+    @media (max-width: $r_tab) {
+        font-size: 2rem;
+        margin-top: 0.2rem;
+        margin-bottom: -0.8rem;
+    }
+   
    }
    &__hover {
     height: 0;
@@ -647,10 +676,18 @@ transition: 2s;
     min-height: 5.5rem;
     max-width: 30rem;
     line-height: 1.5;
+    @media (max-width: $r_tab) {
+        font-size: 1.5rem;
+        max-width: 36rem;
+    }
 }
 &__price {
-    font-size: 2.4rem;
+    font-size: 2rem;
     margin-top: 3rem;
+    @media (max-width: $r_tab) {
+        font-size: 1.5rem;
+        margin-top: 0;
+    }
 }
    &__link {
     text-transform:uppercase;
@@ -682,20 +719,26 @@ transition: 2s;
     width: 100%;
     height: 32.2rem;
     text-align: center;
+    @media (max-width: $r_tab) {
+        height: 19.2rem;
+    }
+   
 }
 
 &__image {
    height: 100%;
    width: 100%;
    max-width: 35.1rem;
-   object-fit: contain;
-   
+   object-fit: contain; 
+   @media (max-width: $r_tab) {
+    max-width: 20.1rem;
 }
+}
+
 &__footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    
 }
    }
    &-pagination {
@@ -754,6 +797,9 @@ transition: 2s;
         background-color: transparent;
         padding: 0;
         border-radius: 100%;
+        @media (max-width: $r_tab) {
+            display: none;
+        }
         &_min {
             width: 4rem;
             height: 4rem;
@@ -778,9 +824,13 @@ transition: 2s;
         font-size: 2.4rem;
         width: 4.6rem;
         border: none;
+        @media (max-width: $r_tab) {
+            display: none;
+        }
         &_min {
             width: 3.3rem;
         }
+      
     }
 }
 
@@ -803,8 +853,27 @@ transition: 2s;
             @media (max-width: $r_desk_1120) {
                 margin-left: 4rem;  
             }
+            @media (max-width: $r_tab) {
+                flex-basis: 100%;
+             }
             
         }
+
+       
+        &__list-holder {
+            display: none;
+            @media (max-width: $r_tab) {
+               margin-top: 18rem;
+                display: flex;
+                gap: 4rem;
+                justify-content: center;
+                align-items: center;  
+                font-family: $font-cormorant;
+                font-style: italic;
+            font-size: 3rem;
+            }
+        }
+   
         &__list {
             list-style-type: none;
             display: flex;
@@ -821,7 +890,13 @@ transition: 2s;
             @media (max-width: $r_desk_1120) {
                 margin-left: 4rem;  
             }
+            @media (max-width: $r_tab) {
+               display: none;  
+            }
+
         }
+
+
         &__item {
             display: flex;
             flex-direction: column;
@@ -917,11 +992,18 @@ transition: 2s;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 2rem;
+    @media (max-width: $r_tab) {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
 &__item {
     border: 0.1rem solid rgba($green, 0.4);
     border-radius: 2rem;
     padding: 2.7rem 3rem 3.8rem;
     box-sizing: border-box;
+   
     &:hover {
         box-shadow: 0 0 0 0.2rem rgba($green, 0.4) inset;
     }
@@ -932,6 +1014,9 @@ transition: 2s;
     width: 100%;
     height: 21rem;
     text-align: center;
+    @media (max-width: $r_tab) {
+        height: 15rem;
+     }
 }
 &__image {
     height: 100%;
@@ -944,6 +1029,11 @@ transition: 2s;
     color: #27300f;
     margin-top: 1.7rem;
     margin-bottom: 0;
+    @media (max-width: $r_tab) {
+        font-size: 2rem;
+        margin-top: 0.2rem;
+        margin-bottom: -0.8rem;
+    }
 }
 &__description {
     font-size: 1.6rem;
@@ -953,16 +1043,30 @@ transition: 2s;
     min-height: 6.1rem;
     max-width: 30rem;
     line-height: 1.5;
+    @media (max-width: $r_tab) {
+        font-size: 1.5rem;
+        max-width: 36rem;
+    }
 }
 &__price {
     font-size: 2.4rem;
     margin-bottom: 3rem;
     margin-top: 0;
+    @media (max-width: $r_tab) {
+        font-size: 1.5rem;
+        margin-top: 0;
+    }
 }
 &__footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+&__link {
+    @media (max-width: $r_tab) {
+        font-size: 1.5rem;
+        margin-top: 0;
+    }
 }
 }
 .refresh {
