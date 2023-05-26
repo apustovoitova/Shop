@@ -8,7 +8,7 @@ $white: #ffffff;
 $font-jost: 'Jost', sans-serif;
 $font-cormorant: 'Cormorant', serif;
 
-$r_minmob: 320px;
+$r_min_mob: 320px;
 $r_mob_360: 360px;
 $r_mob_400: 400px;
 $r_mob_500: 500px;
@@ -58,6 +58,9 @@ a{
         height: 3.4rem;
         width: 9.8rem;
     }
+    @media (max-width: $r_min_mob) {
+        width: 14rem;
+    }
     &_footer{
         flex-basis: 28rem;
         margin-top: 0.8rem;
@@ -66,6 +69,9 @@ a{
             flex-basis: 4rem;
             margin-top: -4rem;
             margin: 0 auto;
+        }
+        @media (max-width: $r_min_mob) {
+            flex-basis: 6rem;
         }
     }
 }
@@ -130,9 +136,11 @@ gap: 5%;
     color: $green;
     text-decoration: none;
     transition: 0.5s;
+    @media (max-width: $r_min_mob) {
+        font-weight: 500;
+    }
     &:hover {
         color: $orange;
-        
     }
 }
  &__tel {
@@ -141,6 +149,9 @@ gap: 5%;
     flex-basis: 18rem;
     letter-spacing: .13rem;
     text-align: right;
+    @media (max-width: $r_min_mob) {
+        font-size: 2.7rem;
+    }
     &:hover {
         color: $orange;
         transition: 0.2s;
@@ -302,6 +313,9 @@ gap: 5%;
         text-align: center;
         margin-top: 35rem;
      }
+     @media (max-width: $r_min_mob) {
+        margin-top: 36rem;
+}
     }
     &__flex {
         display: flex;
@@ -311,6 +325,9 @@ gap: 5%;
         @media (max-width: $r_desk_1120) {
             padding-top: 3rem;
             padding-bottom: 7rem;
+        }
+        @media (max-width: $r_min_mob) {
+            padding-bottom: 1rem; 
         }
     }
     &__cover {
@@ -379,10 +396,13 @@ gap: 5%;
            margin-top: 2rem;
            animation: shadow 3s infinite;
            border-radius: 100%;
-           @media (max-width: $r_mob_500) {
-            max-width: 220px;
-        }     
     }
+        @media (max-width: $r_mob_500) {
+        max-width: 220px;
+    }     
+        @media (max-width: $r_min_mob) {
+        margin-top: 5rem;
+}
 }
     &__text {
         padding-top: 2rem;
@@ -392,6 +412,9 @@ gap: 5%;
         @media (max-width: $r_tab) {
             flex-basis: 100%;
             padding-top: 0;
+        }
+        @media (max-width: $r_min_mob) {
+            margin-top: -5.4rem;  
         }
     }
     &__btn {
@@ -519,6 +542,9 @@ gap: 5%;
             right: 0; 
             bottom: 25rem;
     }
+    @media (max-width: $r_min_mob) {
+            bottom: 18rem;
+    }
 }
     &__pepper {
         left: 3rem;
@@ -532,6 +558,9 @@ gap: 5%;
             top: 45.2rem;
             left: -.4rem;
             width: 4.6rem;
+        }
+        @media (max-width: $r_min_mob) {
+            top: 30.2rem;
         }
     }
     &__beans {
@@ -558,6 +587,12 @@ gap: 5%;
     }
     @media (max-width: $r_tab) {
        text-align: center;
+    }
+    @media (max-width: $r_min_mob) {
+        font-size: 30px;
+        line-height: 1.5;
+        margin-bottom: -5.1rem;
+        font-weight: 700;
     }
     &__span {
         font-style: italic;
@@ -586,7 +621,10 @@ gap: 5%;
         @media (max-width: $r_desk_1280) {
             font-size: 2.2rem;
         }
-    }
+        @media (max-width: $r_min_mob) {
+            font-size: 1.6rem;
+        }
+    }  
 }
 
 .link {
@@ -606,12 +644,15 @@ transition: 2s;
     font-size: 1.4rem;
 }
 @media (max-width: $r_tab) {
-    
      padding: 1.4rem 4.3rem;
      margin: 0 auto;
      margin-top: 0;
 }
-
+@media (max-width: $r_min_mob) {
+    margin-top: .4rem;
+    padding: 1.3rem 3.3rem;
+    
+}
 &:hover  {
     border: 3px solid black;
     $dark-orange: #cf5c0d;
@@ -631,6 +672,10 @@ transition: 2s;
          margin: 0 auto;
          margin-top: 0;
     }
+    @media (max-width: $r_min_mob) {
+        padding: 1.4rem 3.8rem;
+    }
+
 }
 }
 .offer {
@@ -639,10 +684,12 @@ transition: 2s;
     @media (max-width: $r_tab) {
         padding-bottom: 4rem;   
  }
-
     &__text {
         margin-top: 5.4rem;
         max-width: 70rem;
+        @media (max-width: $r_min_mob) {
+            margin-top: 7.4rem;
+    }
     }
 }
 
@@ -678,13 +725,20 @@ transition: 2s;
         height: 40rem;
         width: 21.1rem;
     }
+    @media (max-width: $r_tab) {
+        height: 38rem;
+    }
     &__elements {
         @media (max-width: $r_tab) {
             display: flex;
             justify-content: center;
             flex-direction: column;
             text-align: center; 
-        }  
+        } 
+        @media (max-width: $r_min_mob) {
+            margin-bottom: -3rem;
+        } 
+       
     }
     &_white {
         height: 52rem;
@@ -703,6 +757,7 @@ transition: 2s;
             text-align: center;
             padding: 2.4rem 1.7rem;
     }
+   
        
         &:hover {
             .swiper-slide__hover {
@@ -757,7 +812,10 @@ transition: 2s;
         margin-top: 0;
         margin-bottom: 2rem;
     }
-    
+    @media (max-width: $r_min_mob) {
+        margin-top: 16px;
+        margin-bottom: 0rem;
+    }
    }
    &__hover {
     height: 0;
@@ -790,6 +848,9 @@ transition: 2s;
         font-size: 1.5rem;
         max-width: 36rem;
     }
+    @media (max-width: $r_tab) {
+        max-width: 17rem;
+    }
 }
 &__price {
     font-size: 2rem;
@@ -797,6 +858,14 @@ transition: 2s;
     @media (max-width: $r_tab) {
         font-size: 2rem;
     }
+    @media (max-width: $r_min_mob) {
+        margin-top: 0;
+        margin-bottom: 4.5rem;
+        font-size: 1.6rem;
+        font-weight: 500;
+    }
+   
+    
 }
    &__link {
     text-transform:uppercase;
@@ -819,6 +888,7 @@ transition: 2s;
         justify-content: center;
         gap: .9rem;
      }
+     
     &:hover {
         opacity: 1;
     }
@@ -849,6 +919,9 @@ transition: 2s;
     @media (max-width: $r_tab) {
         height: 15rem;
     }
+    @media (max-width: $r_min_mob) {
+        height: 11rem;
+} 
    
 }
 
@@ -866,6 +939,9 @@ transition: 2s;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    @media (max-width: $r_min_mob) {
+        margin-top: 1rem;
+        }
 }
    }
    &-pagination {
@@ -904,7 +980,7 @@ transition: 2s;
        justify-content: center;
        align-items: center;
        @media (max-width: $r_mob_500) {
-        bottom: 5rem;
+        bottom: 3rem;
         }
 }
 
@@ -919,6 +995,9 @@ transition: 2s;
 }
 .counter {
     display: flex;
+    @media (max-width: $r_min_mob) {
+        margin-bottom: 7rem;
+    }
     &__btn {
         cursor: pointer;
         height: 50px;
@@ -968,33 +1047,41 @@ transition: 2s;
    
         .title {
             margin-top: 3.9rem;
+            @media (max-width: $r_min_mob) {
+                margin-top: -6.2rem;
+        }
         }
         &__box {
             display: flex;
             justify-content: space-between;
             align-items: center;
             margin-top: 6rem;  
+            @media (max-width: $r_min_mob) {
+                margin-top: 7rem;
         }
-        &__text {
-            margin-left: 12rem;  
-            flex-basis: 62rem;
-            @media (max-width: $r_desk_1280) {
-                margin-left: 8rem;  
-            }
-            @media (max-width: $r_desk_1120) {
-                margin-left: 4rem;  
-            }
-            @media (max-width: $r_tab) {
-                flex-basis: 100%;
-             }
-            
+    }
+    &__text {
+        margin-left: 12rem;  
+        flex-basis: 62rem;
+        @media (max-width: $r_desk_1280) {
+            margin-left: 8rem;  
         }
+        @media (max-width: $r_desk_1120) {
+            margin-left: 4rem;  
+        }
+        @media (max-width: $r_tab) {
+            flex-basis: 100%;
+         }
+         @media (max-width: $r_min_mob) {
+            max-width: 35rem;
+            margin-left: 0rem; 
+    }
+    }     
 
-       
         &__list-holder {
             display: none;
             @media (max-width: $r_tab) {
-               margin-top: 4.4rem;
+                 margin-top: 4.4rem;
                 display: flex;
                 gap: 4rem;
                 justify-content: center;
@@ -1003,6 +1090,11 @@ transition: 2s;
                 font-style: italic;
                 font-size: 3rem;
             }
+            @media (max-width: $r_min_mob) {
+                font-size: 2rem;
+                margin-top: 4.4rem;
+                margin-left: 2rem;
+        }
         }
    
         &__list {
@@ -1024,7 +1116,6 @@ transition: 2s;
             @media (max-width: $r_tab) {
                display: none;  
             }
-
         }
 
 
@@ -1033,6 +1124,9 @@ transition: 2s;
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            @media (max-width: $r_min_mob) {
+                gap: 0rem;
+        }
             &::before {
                 content: '';
                 border: 1px solid rgba($green, 0.4);
@@ -1042,7 +1136,10 @@ transition: 2s;
                 width: 84px;
                 height: 84px;
                 margin-bottom: 1.5rem;  
-                
+                @media (max-width: $r_min_mob) {
+                    width: 62px;
+                    height: 62px; 
+            }
             }
             &:nth-child(1) {
                 &::before {
@@ -1068,11 +1165,24 @@ transition: 2s;
 .trends {
         .title {
             margin-top: 6.3rem;
+            @media (max-width: $r_min_mob) {
+                margin-top: 4.8rem;
+                margin-bottom: 1.4rem;
         }
-
+    }
         &__text {
         margin-top: 32px;
+        @media (max-width: $r_min_mob) {
+            max-width: 31rem;
+            margin: 0 auto;
+        }
     }
+    
+    .swiper-horizontal>.swiper-pagination-bullets {
+        @media (max-width: $r_mob_500) {
+         bottom: -4rem;
+         }
+ }
 
 }
 
@@ -1087,10 +1197,16 @@ transition: 2s;
             @media (max-width: $r_tab) {
                 margin-top: 5.8rem;
             }
+             @media (max-width: $r_min_mob) {
+                margin-top: 5rem;
+            }
         }
         
         &__text {
         margin-top: 32px;
+         @media (max-width: $r_min_mob) {
+                margin-top: 6.6rem;
+            }
     }
 
     &__list {
@@ -1098,6 +1214,10 @@ transition: 2s;
         margin-bottom: 5rem;
         @media (max-width: $r_tab) {
             margin-top: 4rem;
+        }
+        @media (max-width: $r_min_mob) {
+            margin-top: 0rem;
+            margin-bottom: 0rem;
         }
     }
 }
@@ -1153,6 +1273,9 @@ transition: 2s;
     @media (max-width: $r_tab) {
         padding: 2.2rem 2rem 2.8rem;
     }
+     @media (max-width: $r_tab) {
+        padding: 1.2rem 2rem 0.8rem;
+    }
 }
 &__cover {
     position: relative;
@@ -1162,6 +1285,9 @@ transition: 2s;
     text-align: center;
     @media (max-width: $r_tab) {
         height: 15rem;
+     }
+     @media (max-width: $r_min_mob) {
+        height: 8.2rem;
      }
 }
 &__image {
@@ -1263,6 +1389,9 @@ transition: 2s;
             margin-top: 4rem;
         }
     }
+    @media (max-width: $r_min_mob) {
+        margin-top: 9rem;
+    }
 }
 &__link {
     color: $green;
@@ -1316,6 +1445,9 @@ margin-top: 3rem;
         justify-content: center;
         align-items: center;
      }
+     @media (max-width: $r_min_mob) {
+        margin-top: 1.5rem;
+     }
 }
 &__item {
     list-style-type: none;
@@ -1364,7 +1496,9 @@ margin-top: 3rem;
         }
         .title {
            margin: 0;
-           
+           @media (max-width: $r_min_mob) {
+           margin-top: -6.1rem;
+        } 
         }
         
         &__text {
@@ -1382,7 +1516,9 @@ margin-top: 3rem;
             @media (max-width: $r_tab) {
                 margin-bottom: 2rem;
             } 
-              
+            @media (max-width: $r_min_mob) {
+                margin-top: 2.9rem;
+             }   
         }
         &__list {
             list-style-type: none;
@@ -1393,8 +1529,17 @@ margin-top: 3rem;
                 justify-content: space-between;
                 text-align: center; 
             } 
-           
+            @media (max-width: $r_min_mob) {
+                margin-top: 3rem;
+                gap: 1rem;
+            }
+
         }
+        &__item {
+            @media (max-width: $r_min_mob) {
+                min-width: 18rem;
+        }
+    }
     
         &__link {
             color: #27300f;
@@ -1408,8 +1553,8 @@ margin-top: 3rem;
             @media (max-width: $r_tab) {
                 font-size: 1.6rem;
                 gap: 1rem;
-               margin-bottom: 4rem;
-               margin-top: -2rem;
+                margin-bottom: 4rem;
+                margin-top: -2rem;
             } 
             &::before {
                 content: '';
@@ -1430,6 +1575,10 @@ margin-top: 3rem;
                     content: '';
                     background-image: url(../images/catalog/phone.svg);
                     background-size: 2.9rem 3rem;
+                    @media (max-width: $r_min_mob) {
+                        background-size: 2.4rem 2.5rem;
+
+                    } 
                 }
         }
         &__mail {
@@ -1437,11 +1586,17 @@ margin-top: 3rem;
                 content: '';
                 background-image: url(../images/catalog/mail.svg);
                 background-size: 2.9rem 3rem;
-            }
+                @media (max-width: $r_min_mob) {
+                    background-size: 2.4rem 2.5rem;
+                } 
+            } 
         }
 
     &__form {
         flex-basis: 58.9rem;
+        @media (max-width: $r_min_mob) {
+            flex-basis: 45.9rem;
+        }
     }
    } 
 
@@ -1449,6 +1604,9 @@ margin-top: 3rem;
     border: 2px solid rgba($green, 0.4);
     padding: 3.2rem 6.1rem;
     border-radius: 2rem;
+    @media (max-width: $r_min_mob) {
+        padding: 3.2rem 2.2rem;
+    }
     &__name {
         margin-bottom: 2rem;
     }
@@ -1461,12 +1619,19 @@ margin-top: 3rem;
             justify-content: center;
            text-align: center;
         }
+        @media (max-width: $r_min_mob) {
+            margin-top: -6px;
+        }
     }
     &__label {
         font-size: 1.2rem;
         display: block;
         margin-left: .6rem;
         margin-bottom: 1rem;
+        @media (max-width: $r_min_mob) {
+            margin-left: 0rem;
+            margin-bottom: 0rem;
+        }
     }
     &__input {
         border: 1px solid rgba($green, 0.4);
@@ -1476,6 +1641,11 @@ margin-top: 3rem;
         width: 100%;
         box-sizing: border-box;
         border-radius: 2rem;
+        @media (max-width: $r_min_mob) {
+            margin-bottom: 1.5rem;
+            padding: 2.1rem 1.9rem;
+            border-radius: 3rem;
+        }
     }
     &__check {
         font-size: 1.2rem;
@@ -1493,7 +1663,11 @@ margin-top: 3rem;
         @media (max-width: $r_tab) {
             display: flex;
             justify-content: center;
-           text-align: center;
+            text-align: center;
+        }
+        @media (max-width: $r_min_mob) {
+            margin-top: 3.9rem;
+            padding: 1.5rem 5.1rem;
         }
     }
 }
@@ -1549,6 +1723,9 @@ margin-top: 3rem;
     font-weight: 500;
     font-size: 2.4rem;  
     transition: 2s; 
+    @media (max-width: $r_min_mob) {
+        font-size: 3.4rem; 
+    }
     &:hover {
         color: $orange;
     }
@@ -1593,13 +1770,20 @@ margin-top: 3rem;
             background-repeat: no-repeat;
             width: 4.4rem;
             height: 4.4rem;
-              
+            @media (max-width: $r_min_mob) {
+                width: 6.4rem;
+                 height: 6.4rem;
+            }
+           
         }
         &:nth-child(1) {
             &::before {
                 content: '';
                 background-image: url(../images/vk.svg);
                 background-size: 2.3rem 2.3rem;
+                @media (max-width: $r_min_mob) {
+                    background-size: 3.3rem 3.3rem;
+                }
             }
         
         }
@@ -1608,6 +1792,9 @@ margin-top: 3rem;
                 content: '';
                 background-image: url(../images/instagram.svg);
                 background-size: 1.8rem 1.8rem;
+                @media (max-width: $r_min_mob) {
+                    background-size: 2.8rem 2.8rem;
+                }
             }
         
         }
@@ -1616,6 +1803,9 @@ margin-top: 3rem;
                 content: '';
                 background-image: url(../images/facebook.svg);
                 background-size: 1.8rem 1.8rem;
+                @media (max-width: $r_min_mob) {
+                    background-size: 2.8rem 2.8rem;
+                }
             }
         
         }
@@ -1631,6 +1821,10 @@ margin-top: 3rem;
         justify-content: center;
         flex-direction: column;
         text-align: center;
+    }
+    @media (max-width: $r_tab) {
+        font-size: 1rem;
+        gap: 1rem;
     }
 }
    
