@@ -810,7 +810,7 @@ transition: 2s;
     @media (max-width: $r_mob_500) {
         font-size: 1.75rem;
         margin-top: 0;
-        margin-bottom: 2rem;
+        margin-bottom: 0;
     }
     @media (max-width: $r_min_mob) {
         margin-top: 16px;
@@ -848,15 +848,14 @@ transition: 2s;
         font-size: 1.5rem;
         max-width: 36rem;
     }
-    @media (max-width: $r_tab) {
-        max-width: 17rem;
-    }
+
 }
 &__price {
     font-size: 2rem;
     margin-top: 3rem;
     @media (max-width: $r_tab) {
         font-size: 2rem;
+        margin-top: 0;
     }
     @media (max-width: $r_min_mob) {
         margin-top: 0;
@@ -883,12 +882,7 @@ transition: 2s;
        justify-content: center;
        gap: 1rem;
     }
-    @media (max-width: $r_mob_500) {
-        font-size: 1.25rem;
-        justify-content: center;
-        gap: .9rem;
-     }
-     
+   
     &:hover {
         opacity: 1;
     }
@@ -1725,6 +1719,7 @@ margin-top: 3rem;
     transition: 2s; 
     @media (max-width: $r_min_mob) {
         font-size: 3.4rem; 
+        line-height: 1;
     }
     &:hover {
         color: $orange;
@@ -1750,6 +1745,10 @@ margin-top: 3rem;
         justify-content: center;
         text-align: center;
     }
+    @media (max-width: $r_min_mob) {
+        margin-top: 1rem;
+    }
+    
 
     &__item {
         display: flex;
@@ -1822,12 +1821,15 @@ margin-top: 3rem;
         flex-direction: column;
         text-align: center;
     }
-    @media (max-width: $r_tab) {
+    @media (max-width: $r_min_mob) {
         font-size: 1rem;
-        gap: 1rem;
     }
 }
-   
+&__copy {
+    @media (max-width: $r_min_mob) {
+       margin-top: -1.4rem;
+    }
+}
 &__author {
     color: rgba($green, .6);
     transition: .2s;
