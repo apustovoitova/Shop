@@ -271,6 +271,7 @@ gap: 5%;
         opacity: 1;
     }
 }
+
 &__buttons {
     @media (max-width: $r_desk_hd) {
         display: flex;
@@ -278,9 +279,9 @@ gap: 5%;
         gap: 2rem;
         @media (max-width: $r_mob_500) {
             gap: 1.6rem;
-        }
+        }  
     }
-}
+    }
 }
 .main {
     padding-bottom: 18.7rem;
@@ -1210,21 +1211,25 @@ transition: 2s;
             margin-top: 4rem;
         }
         @media (max-width: $r_min_mob) {
-            margin-top: 0rem;
-            margin-bottom: 0rem;
+            margin-top: 4rem;
+            margin-bottom: 2rem;
         }
-    }
+    }  
 }
 .variants {
     display: flex;
+    justify-content: center;
     align-items: center;
     gap: 2rem;
     padding-left: 0;
     list-style-type: none;
-    &__list {
-        flex-basis: 23rem;
-        text-align: center;
-    }
+    flex-wrap: wrap;
+    @media (max-width: $r_min_mob) {
+        flex-basis: 14rem;
+        font-size: 1.3rem;
+        padding: 1.5rem 0;
+        }
+   
     &__link {
         flex-basis: 23rem;
         text-align: center;
@@ -1239,6 +1244,11 @@ transition: 2s;
             border: .1rem solid $orange;
             color: $orange;
         }
+        @media (max-width: $r_min_mob) {
+            flex-basis: 14rem;
+            font-size: 1.3rem;
+            padding: 1.5rem 0;
+            }
     }
 }
 
